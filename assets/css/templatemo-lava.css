@@ -610,7 +610,7 @@ header
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #1e1e1e;
+  background-color: #fffafa;
 }
 
 .background-header .main-nav .menu-trigger.active span:before {
@@ -622,7 +622,7 @@ header
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #1e1e1e;
+  background-color: #ffffff;
 }
 
 .background-header .main-nav .menu-trigger.active span:after {
@@ -636,12 +636,13 @@ header
 
 .header-area.header-sticky .nav {
   margin-top: 20px !important;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #fff;
+  color: #f5f5f5;
 }
+
 
 
 @media (max-width: 1200px) {
@@ -673,7 +674,7 @@ header
   .header-area .main-nav .nav {
     float: none;
     width: 100%;
-    margin-top: 0px !important;
+    margin-top: 80px !important;
     display: none;
     -webkit-transition: all 0s ease 0s;
     -moz-transition: all 0s ease 0s;
@@ -682,12 +683,12 @@ header
     margin-left: 0px;
   }
   .header-area .main-nav .nav li:first-child {
-    border-top: 1px solid #eee;
+    /* border-top: 1px solid #eee; */
   }
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
@@ -696,12 +697,12 @@ header
     line-height: 50px !important;
     padding: 0px !important;
     border: none !important;
-    background: #f7f7f7 !important;
-    color: #191a20 !important;
+    background: #000000 !important;
+    color: #ffffff !important;
   }
   .header-area .main-nav .nav li a:hover {
-    background: #eee !important;
-    color: #fba70b!important;
+    background: #7b7b7b !important;
+    color: #ffffff!important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -735,8 +736,6 @@ header
     height: 0px;
   }
 }
-
-
 
 
 /* 
@@ -788,6 +787,55 @@ anasayfa
 .anasayfa-area .background-image{
   margin-bottom: 30px;
 }
+
+#container {
+  color:#999;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:200px;  
+  width:100%;
+  bottom:45%;
+  display:block;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding: 0px 0px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+#flip p {
+  position:fixed;
+  width:100%;
+  bottom:30px;
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}
+
+
+
 @media (max-width: 1420px) {
   .anasayfa-area .header-text {
     width: 70%;
@@ -821,6 +869,8 @@ anasayfa
   }
 }
 @media (max-width: 810px) {
+
+ 
   .anasayfa-area {
     background-size: contain;
   }
@@ -838,6 +888,47 @@ anasayfa
   }
 }
 @media (max-width: 540px) {
+
+  a.main-button-slider {
+    font-size: 10px;
+    border-radius: 2px;
+    padding: 10px 10px;
+    background-color: #000000;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+  #flip > div > div {
+    color: #fff;
+    padding: 0px 0px;
+    height: 25px;
+    margin-bottom: 25px;
+    display: inline-block;
+  }
+  #container {
+    color:#999;
+    font-size:18px;
+    font-weight:bold;
+    padding-top:80px;  
+    width:100%;
+    bottom:45%;
+    display:block;
+  }
+  .anasayfa-area .header-text p{
+    font-weight: 300;
+    font-size: 10px;
+    color: rgb(122, 122, 122);
+    line-height: 15px;
+    letter-spacing: 0.25px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
   .anasayfa-area {
     background:none;
     width: 100%;
@@ -965,8 +1056,8 @@ fatura
 }
 @media (max-width: 540px) {
   #fatura .container img{
-    height: 231px; ;
-    width:241px ;
+    height: 80px; ;
+    width:80px ;
   } 
 
   .anasayfa-area .header-text {
@@ -1112,7 +1203,7 @@ urunler
     top: 40%;
     border-radius: 100px;
     font-size: 60px;
-    color: #504e4e;
+    color: #504e4e00;
     left: 0px;
     width: 20px;
     height: 40px;
@@ -1429,43 +1520,6 @@ preloader
   width: 250px;
 }
 
-#container {
-  color:#999;
-  text-transform: uppercase;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:200px;  
-  width:100%;
-  bottom:45%;
-  display:block;
-}
-
-#flip {
-  height:50px;
-  overflow:hidden;
-}
-
-#flip > div > div {
-  color:#fff;
-  padding: 0px 0px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
-}
-
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-#flip div div {
-  background:#42c58a;
-}
-#flip div:first-child div {
-  background:#4ec7f3;
-}
-#flip div:last-child div {
-  background:#DC143C;
-}
 
 @keyframes show {
   0% {margin-top:-270px;}
@@ -1478,14 +1532,6 @@ preloader
   100% {margin-top:-270px;}
 }
 
-#flip p {
-  position:fixed;
-  width:100%;
-  bottom:30px;
-  font-size:12px;
-  color:#999;
-  margin-top:200px;
-}
 
 .clearfix:before, .clearfix:after { display: table; content: ''; }
 .clearfix:after { clear: both; }
