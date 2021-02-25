@@ -819,7 +819,6 @@ anasayfa
 
 #container {
   color:#999;
-  text-transform: uppercase;
   font-size:36px;
   font-weight:bold;
   padding-top:200px;  
@@ -935,7 +934,6 @@ anasayfa
     border-radius: 2px;
     padding: 10px 10px;
     background-color: #000000;
-    text-transform: uppercase;
     color: #fff;
     font-weight: 600;
     letter-spacing: 1px;
@@ -968,6 +966,7 @@ anasayfa
     letter-spacing: 0.25px;
     margin-bottom: 20px;
     position: relative;
+
   }
 
   .anasayfa-area {
@@ -1134,8 +1133,8 @@ urunler
   margin-top: -200px;
 }
 #urunler .owl-stage{
-  -webkit-animation: scroll 40s linear infinite;
-  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 15s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 #urunler ,#teknik{
   padding-top: 10px;
@@ -1192,6 +1191,9 @@ urunler
   max-width: 120px;
   margin-bottom: -60px;
 }
+
+
+
 
 #teknik {
   background-color: #fbfbfb;
