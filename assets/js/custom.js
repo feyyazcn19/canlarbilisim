@@ -1,5 +1,37 @@
 (function ($) {
 	
+
+	function createSlick(){  
+
+		$(".product").not('.slick-initialized').slick({
+			centerMode: true,
+			autoplay: true,
+			dots: true,
+		
+			  slidesToShow: 3,
+			responsive: [{ 
+				breakpoint: 768,
+				settings: {
+					dots: false,
+					arrows: true,
+					infinite: false,
+					slidesToShow: 1,
+					slidesToScroll: 1
+				} 
+			}]
+		});	
+	
+	}
+	
+	createSlick();
+	
+	//Will not throw error, even if called multiple times.
+	$(window).on( 'resize', createSlick );
+
+	
+	
+	
+	
 	///// Section-1 CSS-Slider /////    
   // Auto Switching Images for CSS-Slider
   function bannerSwitcher() {
@@ -8,11 +40,11 @@
     else $('.sec-1-input').first().prop('checked', true);
   }
 
-  var bannerTimer = setInterval(bannerSwitcher, 5000);
+  var bannerTimer = setInterval(bannerSwitcher, 3000);
 
   $('nav .controls label').click(function() {
     clearInterval(bannerTimer);
-    bannerTimer = setInterval(bannerSwitcher, 5000)
+    bannerTimer = setInterval(bannerSwitcher, 3000)
   });
 
 
@@ -29,7 +61,7 @@
 		switchlabel = $('.onoffswitch-label'),
 		item = $('.slider .flex-item');
 		check.prop('checked', true);
-		speed = 4000, item,
+		speed = 3000, item,
 		mySlide = setInterval(startSlider, speed);
 
 
@@ -172,29 +204,6 @@ function stopSlider() {
 	
 	
 	
-	$('.owl-carousel').owlCarousel({
-	
-		loop:true,
-		margin: 30,
-		nav: true,
-		interval:2000,
-		pagination: true,
-		responsive: {
-			0: {
-				items: 1,
-				
-			},
-			800: {
-				items: 1,
-				
-			},
-			1000: {
-				items: 2,
-				
-			}
-		}
-	
-	})
 
 
 	$(window).scroll(function () {
@@ -214,14 +223,15 @@ function stopSlider() {
 
 
 	// Scroll animation init
-	window.sr = new scrollReveal();
+	
 
 
 	// Menu Dropdown Toggle
 	if ($('.menu-trigger').length) {
 		$(".menu-trigger").on('click', function () {
-			$(this).toggleClass('active');
 			$('.header-area .nav').slideToggle(200);
+			$('.header-area .nav').pause();
+			
 		});
 	}
 
@@ -237,6 +247,7 @@ function stopSlider() {
 				if (width < 991) {
 					$('.menu-trigger').removeClass('active');
 					$('.header-area .nav').slideUp(200);
+					$('.menu-trigger').pause();
 				}
 				$('html,body').animate({
 					scrollTop: (target.offset().top)

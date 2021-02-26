@@ -1,39 +1,7 @@
-/*
 
-Lava Landing Page
-
-https://templatemo.com/tm-540-lava-landing-page
-
-*/
-
-/* ---------------------------------------------
-Table of contents
-------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. anasayfa
-06. features
-07. urunler
-08. contact
-09. footer
-10. preloader
-
---------------------------------------------- */
-/* 
----------------------------------------------
-font & reset css
---------------------------------------------- 
-*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
-/*
- 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -238,6 +206,8 @@ button.main-button:hover {
 header
 --------------------------------------------- 
 */
+
+
 
 .background-header {
   background-color: #000;
@@ -469,7 +439,7 @@ header
   width: 30px;
   height: 2px;
   left: 0;
-  width: 75%;
+  width: 100%;
 }
 
 .background-header .main-nav .menu-trigger span:before,
@@ -587,9 +557,7 @@ header
     transition: all 0s ease 0s;
     margin-left: 0px;
   }
-  .header-area .main-nav .nav li:first-child {
-    /* border-top: 1px solid #eee; */
-  }
+  
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
@@ -973,7 +941,7 @@ anasayfa
     background:none;
     width: 100%;
     height: 0px;
-    min-height: 430px;
+    min-height: 360px;
   }
 
   .anasayfa-area .header-text {
@@ -1192,50 +1160,22 @@ urunler
   margin-bottom: -60px;
 }
 
+#urunler .testimonial-content{
+  max-width: 1000px;
+  width: 90%;
+  margin: 15px auto;
+  background: #ececec;
+  border-radius: 5px;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 
+}
 
 
 #teknik {
   background-color: #fbfbfb;
 }
 
-.owl-carousel .owl-nav button.owl-next span {
-  /* z-index: 9; */
-  /* top: 40%; */
-  /* border-radius: 100px; */
-  /* font-size: 60px; */
-  color: #ffffff;
-  /* right: 0px; */
-  /* width: 20px; */
-  /* height: 40px; */
-  /* line-height: 40px; */
-  /* text-align: center; */
-  display: inline-block;
-  /* background: rgb(244,129,63); */
-  /* background: linear-gradient(
-145deg
-, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%); */
-  position: absolute;
-}
-
-.owl-carousel .owl-nav button.owl-prev span {
-  z-index: 9;
-  top: 40%;
-  border-radius: 100px;
-  font-size: 60px;
-  color: #ffffff00;
-  left: 100px;
-  width: 20px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  /* display: inline-block; */
-  /* background: rgb(244,129,63); */
-  /* background: linear-gradient(
-145deg
-, rgba(244,129,63,1) 0%, rgba(241,85,106,1) 100%); */
-  position: absolute;
-}
 
 @media (max-width: 600px)
 {
@@ -1606,7 +1546,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 
 /* Contact Form Styling */
 .container {
-	padding: 0 50px 70px;
+	padding: 0 50px 0px;
 }
 .textcenter {
 	text-align: center;
@@ -1703,7 +1643,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 }
 @media only screen and (max-width: 960px) {
 	.container {
-		padding: 0 30px 70px;
+		padding: 0 30px 0px;
 	}
 	.section2 .col2 {
 		width: 100%;
@@ -1928,7 +1868,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
   text-transform: uppercase;
   font-family: Montserrat, sans-serif;
   font-size: 1em;
-  color: #f6eac5;
+  color: #ffffff;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s;
@@ -1939,7 +1879,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
   left: 0;
   height: 3px;
   width: 100%;
-  background: #f6eac5;
+  background: #ffffff;
   z-index: 100;
 }
 #section-1 .content-slider nav .controls label .progressbar .progressbar-fill {
@@ -1977,7 +1917,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 #section-1 .content-slider #banner1:checked ~ nav label:nth-of-type(1) .progressbar-fill,
 #section-1 .content-slider #banner2:checked ~ nav label:nth-of-type(2) .progressbar-fill,
 #section-1 .content-slider #banner3:checked ~ nav label:nth-of-type(3) .progressbar-fill{
-  animation: progressBarFill 5s linear;
+  animation: progressBarFill 3s linear;
 }
 /* Animations */
 @keyframes progressBarFill {
@@ -2102,6 +2042,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
   }
   #section-1 .content-slider nav .controls {
     width: 100%;
+    padding: 10px;
   }
   #section-1 .content-slider nav .controls label {
     width: 19%;
@@ -2153,4 +2094,130 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 .brand-color {
   color: #e81e1c;
   font-weight: bold;
+}
+
+
+
+.product h2 {
+  
+  font-size: 20px;
+}
+
+.product {
+  max-width: 1000px;
+  width: 90%;
+  margin: 15px auto;
+  background: #ffffff00;
+  border-radius: 5px;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  /*h v b s*/
+}
+.product .slick-prev{
+display: none!important;
+}
+
+.product .slick-next{
+  display: none!important;
+  }
+  
+
+.slick-slide {
+  color: #333;
+  padding: 40px 0;
+  font-size: 1.25em;
+  font-family: "Verdana";
+  text-align: center;
+  pointer-events: none;
+}
+
+.slick-slide .desc {
+  opacity: 0;
+}
+
+.slick-slide .desc > * {
+  transition: all 1000ms ease;
+}
+
+.slick-slide .desc h2 {
+  position: relative;
+  left: 50px;
+  line-height: 1;
+}
+
+.slick-slide .desc p {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-dots {
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  padding: 1px;
+  background: #ccc;
+  margin: 10px 5px;
+  width: 40px;
+  height: 5px;
+}
+
+.slick-dots li.slick-active {
+  background: #ea1a18;
+}
+
+.slick-dots button {
+  display: none;
+}
+
+.slick-slide {
+  opacity: 0.2;
+  transition: all 300ms ease;
+}
+
+.slick-current {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.slick-current .desc {
+  opacity: 1;
+}
+
+.slick-current .desc h2 {
+  left: 0;
+}
+
+.slick-current .desc p {
+  top: 0;
+  opacity: 1;
+}
+
+.product .btn {
+  border-radius: 3px;
+  padding: 10px 20px;
+  border: 1px solid #ea1a18;
+  text-decoration: none;
+  color: #e81e1c;
+  font-size: .5em;
+  text-transform: uppercase;
+  display: block;
+  margin: 30px auto 0;
+  width: 50%;
+  font-weight: bold;
+  pointer-events: initial;
+}
+#iletisim img{
+  padding:10px;
 }
