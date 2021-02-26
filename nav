@@ -1,0 +1,18 @@
+<nav class="nav-bar">
+      <div class="logo">
+        <p class="p1"><b>CANLAR</b></p>
+        <p class="p2">Bilişim</p>
+      </div>
+<input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+<li><a href="#anasayfa" class="active">Ana Sayfa</a></li>
+<li><a href="#fatura">Fatura Ödeme</a></li>
+<li><a href="#urunler">Ürünler</a></li>
+<li><a href="#teknik">Teknik Servis</a></li>
+<li><a href="#iletisim">İletişim</a></li>
+
+</ul>
+</nav>
