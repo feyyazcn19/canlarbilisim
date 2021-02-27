@@ -796,8 +796,8 @@ anasayfa
 */
 .anasayfa-area {
   width: 100%;
-  height: 100vh;
-  min-height: 650px;
+  height: vh;
+  min-height: 0px;
   background-image: url(../images/banner2.png);
   background-repeat: no-repeat;
   background-position: right top;
@@ -1081,7 +1081,7 @@ fatura
 }
 
 #fatura {
-  padding: 10px 0px;
+  padding: 50px 0px;
   background-color: #fbfbfb;
 }
 #fatura .container h1 b{
@@ -1139,6 +1139,14 @@ fatura
     margin-right: 0px;
     padding-right: 0px;
   }
+}
+
+@media(max-width:1000px)
+{
+  #fatura {
+  padding: 15px 0px;
+  background-color: #fbfbfb;
+}
 }
 
 /*
@@ -1867,14 +1875,16 @@ input:focus, textarea:focus, keygen:focus, select:focus {
   background: #fff;
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button {
-  padding-bottom: 5em;
+  padding-bottom: 6em;
   z-index: 15 !important;
+  /* margin-top: -10px; */
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a {
   padding: 0.5em 1em;
   text-align: center;
   font-family: Montserrat, sans-serif;
   font-size: 0.875em;
+  bottom: em;
   color: #fff;
   text-transform: uppercase;
   border: 0.1875em solid #fff;
@@ -2073,16 +2083,16 @@ input:focus, textarea:focus, keygen:focus, select:focus {
     height: 29em;
   }
   #section-1 .content-slider nav {
-    bottom: -1em;
+    bottom: 0em;
   }
   #section-1 .content-slider nav .controls {
     width: 90%;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
-    font-size: 2em;
+    font-size: 1em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
-    font-size: 4.5em;
+    font-size: 3em;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper {
     padding-top: 7em;
