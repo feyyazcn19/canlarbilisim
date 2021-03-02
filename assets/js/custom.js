@@ -34,175 +34,33 @@
 	
 	///// Section-1 CSS-Slider /////    
   // Auto Switching Images for CSS-Slider
+//   function bannerSwitcher() {
+//     next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+//     if (next.length) next.prop('checked', true);
+//     else $('.sec-1-input').first().prop('checked', true);
+//   }
+
+//   var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+//   $('nav .controls label').click(function() {
+//     clearInterval(bannerTimer);
+//     bannerTimer = setInterval(bannerSwitcher, 5000)
+//   });
+
+	///// Section-1 CSS-Slider /////    
+  // Auto Switching Images for CSS-Slider
   function bannerSwitcher() {
     next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
     if (next.length) next.prop('checked', true);
     else $('.sec-1-input').first().prop('checked', true);
   }
 
-  var bannerTimer = setInterval(bannerSwitcher, 3000);
+  var bannerTimer = setInterval(bannerSwitcher, 4000);
 
   $('nav .controls label').click(function() {
     clearInterval(bannerTimer);
-    bannerTimer = setInterval(bannerSwitcher, 3000)
+    bannerTimer = setInterval(bannerSwitcher, 4000)
   });
-
-
-	
-	jQuery(document).ready(function ($) {
-
-		(function() {
-	var slider = $('.slider'), 
-		next, 
-		prev, 
-		stop,
-		pause = $('.pause'),
-		check = $('#checkbox'),
-		switchlabel = $('.onoffswitch-label'),
-		item = $('.slider .flex-item');
-		check.prop('checked', true);
-		speed = 3000, item,
-		mySlide = setInterval(startSlider, speed);
-
-
-next = function(el) {
-	if (el.next().length > 0) {
-		return el.next();
-	} else {
-		return item.first();
-	}
-};
-
-prev = function(el) {
-	if (el.prev().length > 0) {
-		return el.prev();
-	} else {
-		return item.last();
-	}
-};
-
-$('.toggle').on('click', function(e) {
-		stopSlider();
-	var el, i, j, new_item, ref;
-		el = $('.active').removeClass('active');
-	if ($(e.currentTarget).data('toggle') === 'next') {
-		new_item = next(el);
-		slider.removeClass('backward');
-	} else {
-		new_item = prev(el);
-		slider.addClass('backward');
-	}
-		new_item.addClass('active').css('order', 1);
-	for (i = j = 2, ref = item.length; 2 <= ref ? j <= ref : j >= ref; i = 2 <= ref ? ++j : --j) {
-		new_item = next(new_item).css('order', i);
-	}
-		slider.removeClass('forward');
-	return setTimeout((function() {
-	return slider.addClass('forward');
-	}), 50);
-});
-
-function startSlider() {
-	var el, i, j, new_item, ref;
-		el = $('.active').removeClass('active');
-		new_item = next(el);
-		slider.removeClass('backward');
-		new_item.addClass('active').css('order', 1);
-	for (i = j = 2, ref = item.length; 2 <= ref ? j <= ref : j >= ref; i = 2 <= ref ? ++j : --j) {
-		new_item = next(new_item).css('order', i);
-		//$('.info i').text(ref);
-	}
-		slider.removeClass('forward');
-	return setTimeout((function() {
-	return slider.addClass('forward');
-	}), 50);
-}
-	switchlabel.click(function () {
-	if (check.prop('checked')) {
-		stopSlider();
-		switchlabel.addClass('donot');
-		$('.pause').hide();
-	}
-	else  {
-	   check.prop('checked', true);
-		mySlide = setInterval(startSlider, speed);
-		$(this).addClass('stop');
-		$(this).removeClass('start');
-		switchlabel.removeClass('donot');$('.pause').show();
-
-
-	}
-});
-slider.each(function() {
-    function play() {
-    if (switchlabel.hasClass("donot")) {pause.removeClass('look');return true}
-   	else{ 
-    switchlabel.addClass('stop');
-	switchlabel.removeClass('start');
- 	mySlide = setInterval(startSlider, speed);
- 	pause.removeClass('look');
- 	$('#checkbox').prop('checked', true); 
-	}
-	}
-    function stop() { 
-    stopSlider();
-    pause.addClass('look'); 
-    }
-	slider.hover(stop, play);
-});
-function stopSlider() {
-	check.prop('checked', false);
-	clearInterval(mySlide);
-	switchlabel.addClass('start');
-	switchlabel.removeClass('stop');
-}
-
-}).call(this);
-
-		setInterval(function () {
-			moveRight();
-		}, 3000);
-	  
-		var slideCount = $('#slider ul li').length;
-		var slideWidth = $('#slider ul li').width();
-		var slideHeight = $('#slider ul li').height();
-		var sliderUlWidth = slideCount * slideWidth;
-		
-		$('#slider').css({ width: slideWidth, height: slideHeight });
-		
-		$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-		
-		$('#slider ul li:last-child').prependTo('#slider ul');
-	
-		function moveLeft() {
-			$('#slider ul').animate({
-				left: + slideWidth
-			}, 200, function () {
-				$('#slider ul li:last-child').prependTo('#slider ul');
-				$('#slider ul').css('left', '');
-			});
-		};
-	
-		function moveRight() {
-			$('#slider ul').animate({
-				left: - slideWidth
-			}, 200, function () {
-				$('#slider ul li:first-child').appendTo('#slider ul');
-				$('#slider ul').css('left', '');
-			});
-		};
-	
-		$('a.control_prev').click(function () {
-			moveLeft();
-		});
-	
-		$('a.control_next').click(function () {
-			moveRight();
-		});
-	
-	});    
-	
-	
 	
 
 
